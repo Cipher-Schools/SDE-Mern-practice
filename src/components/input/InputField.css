@@ -1,0 +1,16 @@
+.inputField{
+    display: flex;
+    width: auto;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+}
+
+.inputField[placeholder]{
+    font-size: 14px;
+}
+
+.inputField:focus{
+    outline: none;
+}

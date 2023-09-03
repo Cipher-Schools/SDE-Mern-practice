@@ -4,8 +4,13 @@ import InputField from "../../../components/input/InputField";
 import "./index.css";
 import Button from "../../../components/button/Button";
 
-function TodoForm() {
+function TodoForm(props) {
   const [task, setTask] = useState("");
+
+  const handleSubmit = () => {
+    props.handleAddTask(task);
+    setTask("");
+  };
   return (
     <section className="form-container">
       <InputField
@@ -15,7 +20,7 @@ function TodoForm() {
         value={task}
         setValue={setTask}
       />
-      <Button title="submit" handleSubmit={() => console.log("clicked")} className="submitBtn" />
+      <Button title="submit" handleSubmit={handleSubmit} className="submitBtn" />
     </section>
   );
 }
